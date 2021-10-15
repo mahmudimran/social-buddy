@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link,useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const Post = (props) => {
 const {id, title, body} = props.post
@@ -24,7 +24,6 @@ const stylePost ={
             <h3>ID: {id}</h3>
             <h4>Title: {title}</h4>
             <p>{body}</p>
-            {/* <Link to={`/comment/${id}`}> show</Link> */}
             <button onClick={()=>handlePost(id)}>Show Comment</button>
         </div>
     );
