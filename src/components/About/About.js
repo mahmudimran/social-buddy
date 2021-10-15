@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-
+import img1 from'../images/post1.jpg'
+import img2 from '../images/post2.jpg'
 const stylePost ={
     textAlign: 'center'
 }
@@ -21,6 +22,7 @@ const About = () => {
      },[postId])
      
     const {title, body} = post
+  
     return (
         <div style={stylePost}>
             <h3>ID : {postId}</h3>
@@ -30,6 +32,10 @@ const About = () => {
             {
                 comment.map(post => <Details post={post}></Details>)
             }
+            {
+             comment.length === 5? <img src={img2} alt="" /> : <img src={img1} alt="" />
+            }
+
         </div>
     );
 };
